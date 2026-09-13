@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JEONG EUNSE | IT Portfolio</title>
+<style>
+:root{
+  --bg:#fbfbfa;
+  --card:#ffffff;
+  --text:#17191c;
+  --sub:#5e636b;
+  --muted:#8a8f96;
+  --line:#e5e7ea;
+  --soft:#f3f5f7;
+  --accent:#1f3b5b;
+  --accent-soft:#eef3f8;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+header{
+  height:72px;display:flex;align-items:center;justify-content:space-between;
+  border-bottom:1px solid var(--line);background:rgba(251,251,250,.96);
+  position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)
+}
+.brand{font-size:14px;font-weight:800;letter-spacing:.06em}
+nav{display:flex;gap:24px;font-size:13px;color:var(--sub)}
+nav a:hover{color:var(--text)}
+
+.hero{padding:88px 0 72px;border-bottom:1px solid var(--line)}
+.hero-top{display:grid;grid-template-columns:1.4fr .8fr;gap:56px;align-items:start}
+.hero h1{margin:0;font-size:52px;line-height:1.08;letter-spacing:-.04em}
+.role{margin:12px 0 24px;font-size:20px;font-weight:750;color:var(--accent)}
+.intro{max-width:780px;font-size:16px;line-height:1.9;color:var(--sub);word-break:keep-all}
+.hero-side{
+  background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;
+  box-shadow:0 8px 28px rgba(20,28,38,.05)
+}
+.hero-side div+div{margin-top:18px;padding-top:18px;border-top:1px solid var(--line)}
+.hero-side small{display:block;color:var(--muted);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:6px}
+.hero-side strong{font-size:15px}
+
+section{padding:76px 0;border-bottom:1px solid var(--line)}
+.section-label{margin:0 0 8px;font-size:12px;font-weight:800;letter-spacing:.1em;color:var(--accent)}
+.section-title{margin:0 0 34px;font-size:32px;letter-spacing:-.03em}
+
+.list{display:grid;gap:18px}
+.item{
+  display:grid;grid-template-columns:180px 1fr 22px;gap:28px;
+  padding:28px;background:var(--card);border:1px solid var(--line);border-radius:16px;
+  box-shadow:0 5px 18px rgba(22,30,40,.035);transition:.18s ease
+}
+.item:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(22,30,40,.07);border-color:#ccd2d8}
+.item-meta{font-size:13px;color:var(--muted);line-height:1.7}
+.item h3{margin:0 0 10px;font-size:21px;letter-spacing:-.02em}
+.item p{margin:0;font-size:14px;line-height:1.75;color:var(--sub);word-break:keep-all}
+.arrow{align-self:center;color:#92979d;font-size:19px}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:16px}
+.tag{padding:6px 9px;border-radius:999px;background:var(--soft);font-size:11px;color:#555b63;border:1px solid #e7e9ec}
+
+.skills-card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.skill{display:grid;grid-template-columns:190px 1fr;gap:28px;padding:16px 20px;border-bottom:1px solid var(--line)}
+.skill:last-child{border-bottom:0}
+.skill b{font-size:13px;color:#30343a}
+.skill span{font-size:14px;color:var(--sub);line-height:1.65}
+.note{margin-top:14px;font-size:12px;color:var(--muted)}
+
+.background{display:grid;grid-template-columns:1.1fr .8fr 1.2fr;gap:14px}
+.bgcell{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.bgcell small{display:block;color:var(--muted);font-size:11px;margin-bottom:8px}
+.bgcell strong{font-size:16px}
+.bgcell p{margin:8px 0 0;color:var(--sub);font-size:13px;line-height:1.6}
+
+.back{display:inline-block;margin-top:28px;font-size:13px;color:var(--sub)}
+.detail-hero{padding:54px 0 46px;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;color:var(--accent);font-weight:800;letter-spacing:.08em;margin-bottom:12px}
+.detail-hero h1{margin:0;max-width:900px;font-size:40px;line-height:1.22;letter-spacing:-.035em}
+.summary{max-width:820px;margin:18px 0 0;font-size:15px;line-height:1.85;color:var(--sub);word-break:keep-all}
+
+.detail-section{
+  display:grid;grid-template-columns:190px 1fr;gap:38px;
+  padding:56px 0;border-bottom:1px solid var(--line)
+}
+.detail-section h2{margin:0;font-size:19px;letter-spacing:-.015em}
+.copy{font-size:15px;line-height:1.9;color:#50555c;word-break:keep-all}
+.copy b{color:var(--text)}
+
+.callout{
+  margin:18px 0 0;padding:18px 20px;border-left:4px solid var(--accent);
+  background:var(--accent-soft);color:#34475b;font-size:14px;line-height:1.75;border-radius:0 10px 10px 0
+}
+
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding:48px 0;border-bottom:1px solid var(--line)}
+.compare-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.compare-card h4{margin:0 0 18px;font-size:13px;color:#59606a}
+.flow{display:grid;gap:8px}
+.box{background:var(--soft);border:1px solid #e0e4e8;padding:12px;text-align:center;font-size:13px;font-weight:650;border-radius:8px}
+.arrowdown{text-align:center;color:#a0a5ab;font-size:12px}
+
+.bullets{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.bullet{
+  background:var(--card);border:1px solid var(--line);border-radius:10px;
+  padding:15px 16px;font-size:14px;line-height:1.65;color:#464c53
+}
+.bullet strong{display:block;color:var(--accent);font-size:12px;margin-bottom:4px}
+
+.impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.impact{
+  background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px
+}
+.impact strong{display:block;font-size:14px;color:var(--accent);margin-bottom:7px}
+.impact p{margin:0;font-size:13px;line-height:1.65;color:var(--sub)}
+
+.ops-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:4px}
+.ops-card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.ops-card small{display:block;color:var(--accent);font-weight:800;font-size:11px;letter-spacing:.06em;margin-bottom:8px}
+.ops-card strong{display:block;font-size:15px;margin-bottom:8px}
+.ops-card p{margin:0;font-size:13px;line-height:1.65;color:var(--sub)}
+
+.footer{min-height:100px;display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:12px}
+
+@media(max-width:850px){
+  .wrap{padding:0 20px}
+  nav{display:none}
+  .hero-top{grid-template-columns:1fr;gap:32px}
+  .hero h1{font-size:40px}
+  .item{grid-template-columns:1fr 20px}
+  .item-meta{grid-column:1/-1}
+  .skill,.detail-section{grid-template-columns:1fr;gap:12px}
+  .compare,.impact-grid,.ops-grid,.background,.bullets{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <a class="brand" href="index.html">JEONG EUNSE</a>
+  <nav>
+    <a href="index.html#experience">Experience</a>
+    <a href="index.html#projects">Projects</a>
+    <a href="index.html#skills">Skills</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-top">
+    <div>
+      <h1>정은세</h1>
+      <div class="role">Back-End Developer · ERP / Platform / Data</div>
+      <p class="intro">
+        Java와 Spring을 중심으로 백엔드 개발을 해왔고, 현재는 인사·급여·4대보험 ERP를 개발하고 운영하고 있습니다.
+        실제 고객사가 사용하는 시스템에서 외부기관 연계, 데이터 정합성, 고객사별 권한 설정과 운영 요청 대응을 경험했습니다.
+        프로젝트에서는 Redis 동시성 처리, 메시지 기반 알림, 생성형 AI API 활용을 다뤘습니다.
+      </p>
+    </div>
+    <div class="hero-side">
+      <div><small>Current</small><strong>ERP Development & Operation</strong></div>
+      <div><small>Main Stack</small><strong>Java · Spring · Oracle</strong></div>
+      <div><small>Interest</small><strong>Platform · Data · AI</strong></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <p class="section-label">EXPERIENCE</p>
+  <h2 class="section-title">경력</h2>
+  <div class="list">
+    <a class="item" href="pages/erp.html">
+      <div class="item-meta">2026.07 — Present<br>인성회계법인</div>
+      <div>
+        <h3>ERP 개발 및 운영</h3>
+        <p>
+          인사·급여·4대보험 ERP의 개발과 운영을 담당하고 있습니다.
+          고용·산재 외부 연계 기능의 사내 모듈 전환과 인사발령 처리뿐 아니라,
+          고객사 계약 범위와 내부 직급·레벨에 맞춘 메뉴 및 접근 권한 설정 등 시스템 운영 업무도 수행하고 있습니다.
+        </p>
+        <div class="tags"><span class="tag">Java</span><span class="tag">Spring</span><span class="tag">Oracle</span><span class="tag">PL/SQL</span><span class="tag">WebSquare</span></div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+    <a class="item" href="pages/onco.html">
+      <div class="item-meta">2025.09 — 2025.10<br>주식회사 폭씨</div>
+      <div>
+        <h3>ONCO 백엔드 개발</h3>
+        <p>웹 기반 코딩 IDE에서 오케스트레이터를 통한 언어별 실행 서버 연계와 채점 결과 표시 개선, 예외 처리 및 운영 상태 확인 업무를 경험했습니다.</p>
+        <div class="tags"><span class="tag">Java</span><span class="tag">Spring</span><span class="tag">REST API</span><span class="tag">Grafana</span></div>
+      </div>
+      <div class="arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<section id="projects">
+  <p class="section-label">PROJECTS</p>
+  <h2 class="section-title">프로젝트</h2>
+  <div class="list">
+    <a class="item" href="pages/auction.html">
+      <div class="item-meta">2025.05<br>Back-End</div>
+      <div>
+        <h3>Redis 기반 실시간 경매</h3>
+        <p>동시 입찰 상황에서 최고가 갱신이 충돌할 수 있는 문제를 해결하기 위해 Redis 자료구조와 갱신 방식을 재설계했습니다.</p>
+        <div class="tags"><span class="tag">Redis</span><span class="tag">Lua Script</span><span class="tag">nGrinder</span></div>
+      </div><div class="arrow">→</div>
+    </a>
+    <a class="item" href="pages/community.html">
+      <div class="item-meta">2025.05 — 2025.07<br>Team Project</div>
+      <div>
+        <h3>MSA 기반 스터디 커뮤니티</h3>
+        <p>RabbitMQ로 서버 간 메시지를 전달하고 SSE로 알림을 제공했습니다. 전달되지 않은 알림은 MongoDB에 저장하고 Scheduler를 통해 다시 전송하도록 구성했습니다.</p>
+        <div class="tags"><span class="tag">RabbitMQ</span><span class="tag">SSE</span><span class="tag">MongoDB</span></div>
+      </div><div class="arrow">→</div>
+    </a>
+    <a class="item" href="pages/ugahacks.html">
+      <div class="item-meta">2026.02.06 — 02.08<br>UGAHacks</div>
+      <div>
+        <h3>Gemini VLM 기반 이미지 정보 추출</h3>
+        <p>무료 API 제한으로 기존 이미지 처리 방식에 문제가 생겨, 검색 단계를 줄이고 한 번의 요청에서 필요한 정보를 구조화해 받는 방식으로 변경했습니다.</p>
+        <div class="tags"><span class="tag">Gemini VLM</span><span class="tag">Generative AI</span><span class="tag">Prompt</span></div>
+      </div><div class="arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<section id="skills">
+  <p class="section-label">SKILLS</p>
+  <h2 class="section-title">기술</h2>
+  <div class="skills-card">
+    <div class="skill"><b>Languages</b><span>Java · SQL · PL/SQL · Python</span></div>
+    <div class="skill"><b>Backend</b><span>Spring Boot · JPA · QueryDSL · Spring Security · OAuth2 · JWT · REST API</span></div>
+    <div class="skill"><b>Database / Cache</b><span>Oracle · PostgreSQL · MySQL · MongoDB · Redis</span></div>
+    <div class="skill"><b>Messaging</b><span>RabbitMQ · SSE · Event-Driven Architecture</span></div>
+    <div class="skill"><b>Enterprise / Front</b><span>WebSquare · JavaScript</span></div>
+    <div class="skill"><b>Certificate / Security</b><span>Bouncy Castle · 인증서 기반 연계</span></div>
+    <div class="skill"><b>Tools</b><span>Docker · Jenkins · Git · Grafana · nGrinder</span></div>
+    <div class="skill"><b>AI</b><span>Gemini VLM · Generative AI API Integration · Prompt Engineering</span></div>
+  </div>
+  <p class="note">Python은 대학 데이터 분석 과제에서 활용했으며, 주 개발 언어는 Java입니다.</p>
+</section>
+
+<section>
+  <p class="section-label">BACKGROUND</p>
+  <h2 class="section-title">학력 및 자격</h2>
+  <div class="background">
+    <div class="bgcell"><small>Education</small><strong>부산대학교</strong><p>도시공학 전공 · Big Data 관련 복수전공</p></div>
+    <div class="bgcell"><small>Training</small><strong>1,080시간</strong><p>개발 교육 및 프로젝트</p></div>
+    <div class="bgcell"><small>Certifications</small><strong>정보처리기사 · SQLD · ADsP</strong><p>2026.06 · 2025.06 · 2024.11</p></div>
+  </div>
+</section>
+</main>
+
+<footer class="footer"><span>IT Portfolio</span><span>JEONG EUNSE</span></footer>
+</div>
+</body>
+</html>
