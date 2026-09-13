@@ -156,24 +156,45 @@ section{padding:76px 0;border-bottom:1px solid var(--line)}
 <div class="detail-hero">
   <div class="kicker">PROJECT · UGAHACKS</div>
   <h1>Gemini VLM을 활용한 이미지 정보 추출</h1>
-  <p class="summary">무료 API 환경의 제약 때문에 초기 처리 구조를 단순화하고, 한 번의 요청에서 필요한 정보를 구조화해 받는 방식으로 변경했습니다.</p>
+  <p class="summary">
+  초기 이미지 처리 구조가 API 처리 한계에 부딪히자,
+  검색 단계를 제거하고 한 번의 Gemini VLM 요청으로 필요한 정보를 구조화해 반환하도록 처리 흐름을 재설계했습니다.
+</p>
   <div class="tags"><span class="tag">Gemini VLM</span><span class="tag">Generative AI</span><span class="tag">Prompt Engineering</span></div>
 </div>
 
 <div class="detail-section">
-  <h2>처음 방식</h2>
-  <div class="copy">이미지를 여러 부분으로 나눠 처리하고, 필요한 내용을 검색한 뒤 Gemini VLM에 전달하는 구조로 시작했습니다.</div>
+
+  <h2>초기 구조</h2>
+
+  <div class="copy">
+
+    이미지를 여러 부분으로 나눠 처리하고,
+
+    필요한 내용을 검색한 뒤 Gemini VLM에 전달하는 구조로 시작했습니다.
+
+  </div>
+
 </div>
 <div class="compare">
   <div class="compare-card"><h4>초기</h4><div class="flow"><div class="box">Image</div><div class="arrowdown">↓</div><div class="box">Chunking</div><div class="arrowdown">↓</div><div class="box">Search</div><div class="arrowdown">↓</div><div class="box">Gemini VLM</div></div></div>
   <div class="compare-card"><h4>변경</h4><div class="flow"><div class="box">Image</div><div class="arrowdown">↓</div><div class="box">Gemini VLM</div><div class="arrowdown">↓</div><div class="box">Structured Output</div></div></div>
 </div>
 <div class="detail-section">
-  <h2>문제와 변경</h2>
+  <h2>제약과 재설계</h2>
+
   <div class="copy">
-    이미지를 여러 청크로 처리하면서 무료 API에서 일부 청크를 처리하지 못하는 문제가 생겼습니다.
-    해커톤 환경에서 별도 인프라를 추가하기보다 검색 단계를 제거하고,
-    한 번의 요청에서 필요한 항목을 구조화해 반환하도록 프롬프트와 처리 방식을 바꿨습니다.
+
+    이미지를 여러 청크로 나누어 처리하면서 API 처리 범위를 넘어
+
+    일부 청크가 정상적으로 처리되지 않는 문제가 발생했습니다.<br><br>
+
+    제한된 해커톤 시간과 자원 안에서 핵심 기능을 완성하기 위해 검색 단계를 제거하고,
+
+    한 번의 Gemini VLM 요청으로 필요한 항목을 구조화해 반환하도록
+
+    프롬프트와 처리 흐름을 재설계했습니다.
+
   </div>
 </div>
 <div class="detail-section">

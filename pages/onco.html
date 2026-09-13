@@ -158,9 +158,9 @@ section{padding:76px 0;border-bottom:1px solid var(--line)}
   <div class="kicker">EXPERIENCE · ONCO</div>
   <h1>여러 언어를 실행하는 웹 IDE 백엔드 개발</h1>
   <p class="summary">
-    웹 기반 코딩 IDE에서 언어별 실행 서버를 연결하는 구조와 채점 결과 처리 기능을 개발했습니다.
-    코드 실행뿐 아니라 사용자가 오답 원인을 확인하기 어려운 출력 표시 문제도 개선했습니다.
-  </p>
+  웹 기반 코딩 IDE에서 언어별 실행 서버를 연결하는 구조와 채점 결과 처리 기능을 개발했습니다.<br>
+  코드 실행뿐 아니라 공백·개행 차이 때문에 사용자가 오답 원인을 확인하기 어려운 출력 표시 문제도 개선했습니다.
+</p>
   <div class="tags">
     <span class="tag">Java</span>
     <span class="tag">Spring</span>
@@ -173,9 +173,9 @@ section{padding:76px 0;border-bottom:1px solid var(--line)}
 <div class="detail-section">
   <h2>다중 언어 실행</h2>
   <div class="copy">
-    웹 IDE에서 여러 프로그래밍 언어를 지원하기 위해 언어별 실행 서버가 분리된 구조를 다뤘습니다.
-    사용자가 선택한 언어에 따라 오케스트레이터가 해당 실행 서버로 요청을 전달하고,
-    실행 결과를 다시 서비스로 반환하는 흐름입니다.
+  웹 IDE에서 여러 프로그래밍 언어를 지원하기 위해 언어별 실행 서버가 분리된 구조를 다뤘습니다.
+  사용자가 선택한 언어에 따라 오케스트레이터가 해당 실행 서버로 요청을 전달하고,
+  실행 결과를 다시 서비스로 반환하는 흐름을 개발·연동했습니다.
     <div class="callout">
       <b>하나의 웹 IDE에서 여러 언어를 지원</b><br>
       언어별 실행 환경을 하나의 서버에 섞는 대신 실행 서버를 분리하고,
@@ -249,7 +249,10 @@ section{padding:76px 0;border-bottom:1px solid var(--line)}
   <div class="impact-grid">
     <div class="impact"><strong>실행 구조</strong><p>언어별 실행 환경을 분리하고 요청을 적절한 서버로 연결하는 구조를 경험했습니다.</p></div>
     <div class="impact"><strong>사용자 관점</strong><p>백엔드 결과가 정확한 것뿐 아니라 사용자가 오류 원인을 확인할 수 있는 표시 방식도 중요했습니다.</p></div>
-    <div class="impact"><strong>운영</strong><p>API 오류와 실행 결과를 확인하고 서비스 상태를 모니터링하는 경험을 쌓았습니다.</p></div>
+    <div class="impact">
+  <strong>운영</strong>
+  <p>API 오류와 실행 결과를 확인하고 Grafana를 통해 서비스 상태를 모니터링했습니다.</p>
+</div>
   </div>
 </div>
 </main>

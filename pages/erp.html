@@ -156,16 +156,22 @@ section{padding:76px 0;border-bottom:1px solid var(--line)}
 <div class="detail-hero">
   <div class="kicker">EXPERIENCE · 인성회계법인</div>
   <h1>ERP 개발과 고객사 운영</h1>
-  <p class="summary">인사·급여·4대보험 ERP를 개발하고 운영하며, 대외기관 연계 기능 개발과 함께 고객사별 계약 범위·직급·사용자 레벨에 따른 메뉴 및 접근 권한 설정 업무도 수행하고 있습니다.</p>
+  <p class="summary">
+  인사·급여·4대보험 ERP를 개발·운영하며,
+  고객사별 운영 환경과 권한 관리, 인사발령 데이터 정합성 개선,
+  고용·산재 대외기관 연계 기능의 사내 모듈 전환을 수행하고 있습니다.
+</p>
   <div class="tags"><span class="tag">Java</span><span class="tag">Spring</span><span class="tag">Oracle</span><span class="tag">PL/SQL</span><span class="tag">WebSquare</span><span class="tag">Certificate</span></div>
 </div>
 
 <div class="detail-section">
   <h2>현재 업무</h2>
   <div class="copy">
-    인사·급여·4대보험 ERP의 개발과 운영을 담당하고 있습니다.
-    신규 기능을 개발하는 것과 함께 실제 고객사가 사용하는 시스템을 관리하면서,
-    고객사별 계약 범위와 조직 내 권한 체계에 맞춰 사용 환경을 설정하고 운영 요청에 대응하고 있습니다.
+    <p>
+  인사·급여·4대보험 ERP의 개발과 운영을 담당하고 있습니다.<br>
+  신규 기능 개발뿐 아니라 실제 고객사가 사용하는 시스템의 오류 대응,
+  데이터 확인, 고객 요청 반영 및 운영 환경 관리까지 함께 수행하고 있습니다.
+</p>
     <div class="callout">
       <b>개발 + 운영을 함께 경험하고 있다는 점</b><br>
       기능을 만드는 것뿐 아니라, 고객사마다 다른 계약 범위와 사용자 권한, 실제 업무 흐름을 고려해 시스템을 운영하고 있습니다.
@@ -189,8 +195,11 @@ section{padding:76px 0;border-bottom:1px solid var(--line)}
       </div>
       <div class="ops-card">
         <small>CLIENT REQUEST</small>
-        <strong>고객사 요청 대응</strong>
-        <p>고객사 요청에 따라 사용자별·조직별 사용 범위를 조정하고 운영 환경을 맞췄습니다.</p>
+        <strong>고객사 요청·장애 대응</strong>
+<p>
+  Q&A 게시판을 통해 접수된 고객사 요청을 바탕으로 기능을 개발·추가하고,
+  운영 중 발생한 장애와 오류를 확인해 개선했습니다.
+</p>
       </div>
     </div>
   </div>
@@ -199,9 +208,12 @@ section{padding:76px 0;border-bottom:1px solid var(--line)}
 <div class="detail-section">
   <h2>고용·산재 연계 모듈</h2>
   <div class="copy">
-    기존에는 고용·산재 신고와 조회 기능을 외부 스크래핑 업체 API를 통해 처리했습니다.
-    사용량에 따른 비용이 발생하고, 새로운 기능이 필요할 때 외부 업체에 추가 개발을 요청해야 하는 구조였습니다.
-    이 가운데 사내에서 직접 구현할 수 있는 기능을 분석해 내부 모듈로 전환하는 업무를 맡았습니다.
+    기존에는 고용·산재 신고와 조회 기능의 일부를 외부 스크래핑 업체 API를 통해 처리했습니다.<br>
+    기존 API의 요청·응답 구조와 업무 흐름을 분석하고,
+    사내에서 구현 가능한 기능을 내부 연계 모듈로 전환하는 개발을 진행했습니다.<br><br>
+
+    인증서 처리부터 신고 데이터 구성, 외부기관 연계,
+    응답 및 반송 결과 처리까지 기존 ERP 업무 흐름에 연결했습니다.
   </div>
 </div>
 
@@ -229,7 +241,7 @@ section{padding:76px 0;border-bottom:1px solid var(--line)}
   <div class="bullets">
     <div class="bullet"><strong>FLOW ANALYSIS</strong>기존 외부 API의 요청·응답 구조와 업무 흐름 분석</div>
     <div class="bullet"><strong>MODULE DEVELOPMENT</strong>근로내용확인신고 등 고용·산재 업무의 사내 연계 모듈 개발</div>
-    <div class="bullet"><strong>CERTIFICATE</strong>인증서 기반 처리와 외부기관 연계</div>
+    <div class="bullet"><strong>CERTIFICATE</strong>인증서 처리 흐름 연계 및 외부기관 통신</div>
     <div class="bullet"><strong>VALIDATION</strong>신고 데이터 구성 및 전송 전 사전 검증</div>
     <div class="bullet"><strong>RESPONSE</strong>신고 결과와 반송 사유 처리</div>
     <div class="bullet"><strong>ERP INTEGRATION</strong>기존 ERP 화면과 신규 모듈 연결</div>
@@ -250,7 +262,10 @@ section{padding:76px 0;border-bottom:1px solid var(--line)}
   <div class="impact-grid">
     <div class="impact"><strong>운영 적합성</strong><p>같은 ERP라도 고객사별 계약 범위와 사용자 역할에 따라 실제 사용 방식이 다르다는 점을 고려했습니다.</p></div>
     <div class="impact"><strong>데이터 정합성</strong><p>인사·급여처럼 연결된 데이터는 한 기능만 보는 것이 아니라 변경 범위와 처리 순서를 함께 확인했습니다.</p></div>
-    <div class="impact"><strong>내부화</strong><p>외부 서비스에 의존하던 기능 중 직접 개발 가능한 범위를 넓혀 비용과 개발 일정에 대한 통제력을 높였습니다.</p></div>
+    <div class="impact">
+  <strong>내부화</strong>
+  <p>외부 서비스에 의존하던 기능 중 직접 개발 가능한 범위를 넓혀 비용과 개발 일정에 대한 통제력을 높였습니다.</p>
+</div>
   </div>
 </div>
 
