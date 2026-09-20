@@ -138,6 +138,89 @@ section{padding:76px 0;border-bottom:1px solid var(--line)}
   .skill,.detail-section{grid-template-columns:1fr;gap:12px}
   .compare,.impact-grid,.ops-grid,.background,.bullets{grid-template-columns:1fr}
 }
+   /* ===== PDF / PRINT ===== */
+@media print {
+
+  @page {
+    size: A4;
+    margin: 12mm 14mm;
+  }
+
+  html,
+  body {
+    background: #fff;
+  }
+
+  .wrap {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* 웹용 메뉴는 PDF에서 제거 */
+  header {
+    display: none;
+  }
+
+  .back {
+    display: none;
+  }
+
+  /* 카드가 페이지 중간에서 잘리지 않도록 */
+  .item,
+  .skills-card,
+  .skill,
+  .bgcell,
+  .detail-section,
+  .compare,
+  .compare-card,
+  .callout,
+  .bullet,
+  .impact,
+  .ops-card,
+  .detail-hero {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* 메인 페이지의 각 섹션 */
+  section {
+    break-inside: auto;
+  }
+
+  /* 프로젝트 카드 사이 페이지 분할 허용 */
+  .list {
+    display: block;
+  }
+
+  .item {
+    margin-bottom: 18px;
+  }
+
+  /* grid 내부 요소가 이상하게 분할되는 것 방지 */
+ .background,
+.compare {
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+  /* hover 효과 제거 */
+  .item:hover {
+    transform: none;
+  }
+
+  /* 색상/배경 최대한 웹과 동일하게 */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  .footer {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
 </style>
 </head>
 <body>
